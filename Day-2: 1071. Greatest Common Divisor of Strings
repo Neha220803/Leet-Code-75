@@ -1,0 +1,11 @@
+class Solution:
+    def gcdOfStrings(self, str1: str, str2: str) -> str:
+        new_str=""
+        min_str=min(str1,str2)
+        max_str=max(str1,str2)
+        for i in range(1,len(min_str)+1):
+            if len(min_str)%i==0 and len(max_str)%i==0:
+                if min_str[:i] in max_str:
+                    new_str=min_str[:i]
+
+        return new_str
